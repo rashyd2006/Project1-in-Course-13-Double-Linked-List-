@@ -135,4 +135,19 @@ public:
 
 		cout << "NULL";
 	}
+
+	int Size()
+	{
+		int Count = 0;
+
+		Node* current = head;
+
+		while (current != NULL)
+		{
+			Count++;
+			current = current->next;
+		}
+
+		return Count;
+	}
 };
