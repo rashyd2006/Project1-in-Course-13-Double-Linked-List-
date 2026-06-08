@@ -1,0 +1,9 @@
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+x64/
+x86/
