@@ -20,9 +20,9 @@ int main()
 
     cout << "\n" << "Number of items in the linked list = " << MyDblLinkedList.Size();
 
-    cout << "\n" << "Executing .CLear()";
-    MyDblLinkedList.Clear();
-    cout << "\n" << "Number of items in the linked list = " << MyDblLinkedList.Size();
+    MyDblLinkedList.Reverse();
+    cout << "\n" << "Linked List Content: " << "\n";
+    MyDblLinkedList.PrintList();
 
     system("pause>0");
 }

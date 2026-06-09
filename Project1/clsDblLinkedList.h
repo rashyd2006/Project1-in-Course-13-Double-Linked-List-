@@ -160,4 +160,18 @@ public:
 	{
 		while (_Size > 0) DeleteFirstNode();
 	}
+
+	void Reverse()
+	{
+		Node* current = head;
+
+		while (current != NULL)
+		{
+			InsertAtBeginning(current->value);
+			Node* temp = current;
+			current = current->next;
+			DeleteNode(temp);
+		}
+
+	}
 };
