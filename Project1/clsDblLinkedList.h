@@ -155,4 +155,18 @@ public:
 	{
 		return (_Size == 0 ? true : false);
 	}
+
+	void Clear()
+	{
+		Node* current;
+
+		while (head != NULL)
+		{
+			current = head;
+			head = head->next;
+			delete current;
+			_Size--;
+		}
+
+	}
 };
