@@ -158,15 +158,6 @@ public:
 
 	void Clear()
 	{
-		Node* current;
-
-		while (head != NULL)
-		{
-			current = head;
-			head = head->next;
-			delete current;
-			_Size--;
-		}
-
+		while (_Size > 0) DeleteFirstNode();
 	}
 };
