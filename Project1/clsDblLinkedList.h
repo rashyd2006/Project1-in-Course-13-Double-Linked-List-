@@ -164,14 +164,17 @@ public:
 	void Reverse()
 	{
 		Node* current = head;
+		Node* temp = nullptr;
 
-		while (current != NULL)
+		while(current != nullptr)
 		{
-			InsertAtBeginning(current->value);
-			Node* temp = current;
-			current = current->next;
-			DeleteNode(temp);
+			temp = current->prev;
+			current->prev = current->next;
+			current->next = temp;
+			current = current->prev;
 		}
 
+		if (temp != nullptr)
+			head = temp->prev;
 	}
 };
