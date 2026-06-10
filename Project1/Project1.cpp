@@ -18,9 +18,11 @@ int main()
     cout << "\n" << "Linked List Content: " << "\n";
     MyDblLinkedList.PrintList();
 
-    MyDblLinkedList.Reverse();
-    cout << "\n" << "Linked List Content after reverse: " << "\n";
-    MyDblLinkedList.PrintList();
+    clsDblLinkedList <int>::Node* N;
+
+    N = MyDblLinkedList.GetNode(2);
+
+    cout << "\n" << "Node value is: " << N->value;
 
     system("pause>0");
 }
