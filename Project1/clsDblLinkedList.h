@@ -180,16 +180,23 @@ public:
 
 	Node* GetNode(int index)
 	{
-		int i = 0;
+		int Counter = 0;
 
 		Node* current = head;
 
-		while (i != index)
+		if (index > _Size - 1 || index < 0)
+			return NULL;
+
+		while (current != NULL)
 		{
+			if (Counter == index)
+				return current;
+
 			current = current->next;
-			i++;
+			Counter++;
 		}
 
-		return current;
+
+		return NULL;
 	}
 };
