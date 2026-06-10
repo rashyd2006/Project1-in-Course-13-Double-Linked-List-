@@ -210,11 +210,17 @@ public:
 			return ItemNode->value;
 	}
 
-	void UpdateItem(int index, T value)
+	bool UpdateItem(int index, T Newvalue)
 	{
 		Node* ItemNode = GetNode(index);
 
 		if (ItemNode != NULL)
-			ItemNode->value = value;
+		{
+			ItemNode->value = Newvalue;
+			return true;
+		}
+
+		else
+			return false;
 	}
 };
