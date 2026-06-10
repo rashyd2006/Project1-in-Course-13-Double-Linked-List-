@@ -202,23 +202,11 @@ public:
 
 	T GetItem(int index)
 	{
-		int Counter = 0;
+		Node* ItemNode = GetNode(index);
 
-		Node* current = head;
-
-
-		if (index > _Size - 1 || index < 0)
-			return T();
-
-		while (current != NULL)
-		{
-			if (Counter == index)
-				return current->value;
-
-			current = current->next;
-			Counter++;
-		}
-
-		return T();
+		if (ItemNode == NULL)
+			return NULL;
+		else
+			return ItemNode->value;
 	}
 };
