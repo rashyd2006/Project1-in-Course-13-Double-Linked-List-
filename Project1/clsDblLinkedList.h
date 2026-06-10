@@ -43,6 +43,7 @@ public:
 	{
 		Node* new_node = new Node();
 		new_node->value = Value;
+
 		new_node->next = current->next;
 		new_node->prev = current;
 		if (current->next != NULL)
@@ -224,9 +225,17 @@ public:
 			return false;
 	}
 
-	void InsertAfter(int index, T value)
+	bool InsertAfter(int index, T value)
 	{
 		Node* PrevNode = GetNode(index);
-		InsertAfter(PrevNode, value);
+
+		if (PrevNode != NULL)
+		{
+			InsertAfter(PrevNode, value);
+			return true;
+		}
+
+		else
+			return false;
 	}
 };
