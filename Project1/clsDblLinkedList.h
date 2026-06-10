@@ -199,4 +199,26 @@ public:
 
 		return NULL;
 	}
+
+	T GetItem(int index)
+	{
+		int Counter = 0;
+
+		Node* current = head;
+
+
+		if (index > _Size - 1 || index < 0)
+			return T();
+
+		while (current != NULL)
+		{
+			if (Counter == index)
+				return current->value;
+
+			current = current->next;
+			Counter++;
+		}
+
+		return T();
+	}
 };
