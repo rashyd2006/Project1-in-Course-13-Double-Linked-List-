@@ -223,4 +223,10 @@ public:
 		else
 			return false;
 	}
+
+	void InsertAfter(int index, T value)
+	{
+		Node* PrevNode = GetNode(index);
+		InsertAfter(PrevNode, value);
+	}
 };
